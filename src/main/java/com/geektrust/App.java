@@ -12,6 +12,12 @@ import java.util.List;
  */
 public class App 
 {
+
+    public void play() {
+        Innings lengaburuBattingInnings = new Innings(team1,
+                "batting");
+        lengaburuBattingInnings.batting();
+    }
     public static void main( String[] args ) throws IOException {
         if(args.length > 0){
 
@@ -26,11 +32,12 @@ public class App
                 String[] splitArray = readLine.split(" ");
                 InputRequest inputRequest = new InputRequest();
                 inputRequest.setWeatherCondition(splitArray[0]);
-                inputRequest.setFirstOrbitSpeed(Integer.parseInt(splitArray[1]));
-                inputRequest.setSecondOrbitSpeed(Integer.parseInt(splitArray[2]));
+                inputRequest.setFirstOrbitMaxSpeed(Integer.parseInt(splitArray[1]));
+                inputRequest.setSecondOrbitMaxSpeed(Integer.parseInt(splitArray[2]));
                 inputRequestList.add(inputRequest);
 
             }
+
 
         }
     }
